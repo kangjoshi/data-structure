@@ -21,6 +21,10 @@ public class SequentialSymbolTable<K, V> {
         }
     }
 
+    public SequentialSymbolTable() {
+        this.size = 0;
+    }
+
     public int size() {
         return this.size;
     }

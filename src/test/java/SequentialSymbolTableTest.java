@@ -10,6 +10,9 @@ public class SequentialSymbolTableTest{
      *   1. Key(String) & Value(String)를 받는 SymbolTable 클래스 생성
      *   2. 값을 입력하는 put 메서드 생성 (저장 되었으면 true 반환)
      *   3. 값을 반환하는 get 메서드 생성 (없으면 null 반환)
+     *   4. 길이를 반환하는 size메서드 생성 (없으면 0 반환)
+     *   5. 모든 key를 반환하는 keys (없으면 null 반환)
+     *   6. 삭제 (있으면 true, 없으면 false 리턴)
      * */
 
     @Test
@@ -60,6 +63,15 @@ public class SequentialSymbolTableTest{
     }
 
     @Test
+    public void whenGetSizeFromEmptyTableThenReturnZero() {
+        SequentialSymbolTable<String, String> symbolTable = new SequentialSymbolTable<>();
+
+        int size = symbolTable.size();
+
+        assertEquals(size, 0);
+    }
+
+    @Test
     public void whenGetSizeThenReturnSize() {
         SequentialSymbolTable<String, String> symbolTable = new SequentialSymbolTable<>();
         symbolTable.put("key1", "value");
@@ -75,6 +87,15 @@ public class SequentialSymbolTableTest{
 
         assertEquals(size, 2);
         assertEquals(duplicateSize, 1);
+    }
+
+    @Test
+    public void whenGetAllKeysFromEmptyTableThenReturnNull() {
+        SequentialSymbolTable<String, String> symbolTable = new SequentialSymbolTable<>();
+
+        String[] keys = symbolTable.keys();
+
+        assertNull(keys);
     }
 
     @Test
