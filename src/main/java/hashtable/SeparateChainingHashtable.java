@@ -1,7 +1,11 @@
+package hashtable;
+
+import symbolTable.SequentialSymbolTable;
+
 import java.lang.reflect.Array;
 
 /**
- * 개별-체이닝을 이용한 해싱
+ * 개별-체이닝을 이용한 해시테이블
  */
 public class SeparateChainingHashtable<K, V> {
 

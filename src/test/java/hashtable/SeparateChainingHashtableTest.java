@@ -1,4 +1,8 @@
+package hashtable;
+
+import hashtable.SeparateChainingHashtable;
 import org.junit.Test;
+import symbolTable.SequentialSymbolTable;
 
 import static org.junit.Assert.*;
 
