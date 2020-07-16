@@ -31,9 +31,7 @@ public class SeparateChainingHashtable<K, V> {
 
 
     public boolean put(K key, V value) {
-
-        if (size == 0)
-            keySample = key;
+        if (size == 0) keySample = key;
 
         SequentialSymbolTable<K, V> st = symbolTables[hash(key)];
         this.size -= st.size();

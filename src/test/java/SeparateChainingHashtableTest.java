@@ -1,8 +1,5 @@
 import org.junit.Test;
 
-import javax.sound.midi.Soundbank;
-import java.util.HashMap;
-
 import static org.junit.Assert.*;
 
 public class SeparateChainingHashtableTest {
