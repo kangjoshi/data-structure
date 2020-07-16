@@ -69,7 +69,7 @@ public class SequentialSymbolTable<K, V> {
         return result;
     }
 
-    public boolean delete(V key) {
+    public boolean delete(K key) {
         if (size == 0) return false;
 
         Node last = null;
